@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>                              <!--Etiquetas meta y links con el icono y el css-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Andrés Pérez Domínguez">
+    <meta name="description" content="Página principal de los quizzes">
+    <meta name="keywords" content="Dark Souls, Quiz, Soulsborne, Soulslike, Difícil">
+    <link rel="shortcut icon" href="imagenes/icono.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="eye icon" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <title>Dark Souls Quiz</title>
+</head>
+
+<body>
+    <nav class="navbar">                    <!--Nav con los enlaces a los quizzes mediante imágenes de cada juego-->
+        <ul class="navbar-nav">
+            <li class="navbar-item"><a href="#"><img src="imagenes/hoguera.jpg" id="hoguera"></a></li>
+            <li class="navbar-item"><a href="ds1.html"><img src="imagenes/Dark_Souls.png" id="ds1"></a></li>
+            <li class="navbar-item"><img src="imagenes/ds2_logo.jpg" id="ds2"></li>
+            <li class="navbar-item"><img src="imagenes/Dark_Souls_III.jpg" id="ds3"></li>
+        </ul>
+    </nav>
+    
+    <main>
+    <header>
+        <p class="titulo">Bienvenido a los quizzes de Dark Souls</p>    <!--Título de la página-->
+    </header>
+    <aside>
+
+    </aside>
+    <article>
+        <section>
+            <p class="texto">Crea tu cuenta y empieza a responder clicando en los logos de arriba</p>
+        </section>
+        <section>
+            <form name="signUp" onsubmit="validarFormulario()">
+                <fieldset>
+                    <label>Nombre de usuario</label><br>
+                    <input type="text" name="usuario" pattern="^[a-zA-Z][a-zA-Z0-9]{3,15}$" title="El nombre de usuario debe tener entre 3 y 15 caracteres sin contener letras especiales"><br><br>
+                    <label>Correo electrónico</label><br>
+                    <input type="email" name="email"><br><br>
+                    <label>Contraseña</label><br>
+                    <input type="password" name="contraseña" id="pass" pattern="[a-zA-Z0-9]{6,15}" title="Las contraseñas necesitan tener al menos un número y tener una longitud de entre 6 y 15 caracteres"><br><br>
+                    <i class="bi bi-eye-slash" id="verPass" style="margin-left:-30px; cursor:pointer;"></i>
+                    <input type="submit" name="crearcuenta" value="Crear cuenta"><br>
+                </fieldset>
+            </form>
+            <script src="script.js"></script>
+        </section>
+    </article>
+    <footer>
+        <p>Dark Souls es una saga de videojuegos creada por <em>Bandai Namco</em> y su distribución ilegal está terminalmente prohibida</p>
+        <p>Página hecha por Andrés Pérez Domínguez | Correo: andres.perez.dominguez03@gmail.com</p>
+     </footer>
+    </main>
+</body>
+</html>

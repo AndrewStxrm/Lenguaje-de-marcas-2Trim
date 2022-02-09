@@ -1,0 +1,231 @@
+
+/*Propiedades del body donde se introduce el fondo de la página así como la fuente del texto*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+    background-image: url("imagenes/fondods1.jpg");
+    background-repeat: no-repeat;
+    font-family: "Copperplate", "Papyrus", "fantasy"
+}
+
+/*Configuración del nav*/
+
+.navbar{
+    width: 100%;
+    height: 5vw;
+    background-color: black;
+    color: white;
+    padding: auto;
+    transition: 200ms ease;
+}
+
+/*Hover del nav para que se haga más grande cuando se pase el ratón por encima*/
+
+.navbar:hover {
+    height: 6vw;
+}
+
+/*Configuración de la lista del nav*/
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*Formato de los elementos de la lista*/
+
+.navbar-item{
+    padding-top: 1vw;
+    padding: auto;
+    margin: auto;
+    margin-top: 0;
+}
+
+/*Primer logo*/
+
+#hoguera{
+    display: block;
+    width: 8vw;
+    height: 4vw;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+
+#hoguera:hover{
+    width: 9vw;
+    height: 5vw;
+}
+
+/*Segundo logo*/
+
+#ds1{
+    width: 20vw;
+    height: 50%;
+    display: block;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+
+#ds1:hover{
+    width: 21vw;
+    height: 60%;
+}
+
+/*Tercer logo*/
+
+#ds2{
+    display: block;
+    width: 20vw;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+
+#ds2:hover{
+    width: 21vw;
+}
+
+/*Cuarto logo*/
+
+#ds3{
+    display: block;
+    width: 20vw;
+    height: 50%;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+
+#ds3:hover{
+    width: 21vw;
+    height: 65%;
+}
+
+/*Color de las letras dentro del main*/
+
+main{
+    color: white;
+}
+
+/*Configuración del título al cual le incluyo una animación*/
+
+.titulo{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.5vw;
+    padding-top: 1vh;
+    animation-name: vanishing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s ease;
+    
+    
+}
+
+/*La nombrada animación que creo con @keyframes e intenta crear un efecto de fuego*/
+
+@keyframes vanishing{
+    from{    
+        color: transparent;
+        background: transparent;
+        text-shadow: -3px 3px rgba(179,179,179,.4), -2px 2px rgba(153,153,153,.2), -1px 1px rgba(179,179,179,.2), -1px 1px rgba(179,179,179,.2), 0px 0px rgba(128,128,128,.5), 1px -1px rgba(77,77,77,.6), 1px -1px rgba(77,77,77,.7), 2px -2px rgba(82,82,82,.8), 3px -3px rgba(77,77,77,.9), 4px -4px rgba(77,77,77,1);
+    }
+
+    to{
+        color: transparent;
+    background: transparent;
+    text-shadow: -3px 3px rgba(223, 223, 223, 0.4), -2px 2px rgba(190, 190, 190, 0.2), -1px 1px rgba(224, 224, 224, 0.2), -1px 1px rgba(228, 228, 228, 0.2), 0px 0px rgba(163, 163, 163, 0.5), 1px -1px rgba(109, 109, 109, 0.6), 1px -1px rgba(110, 110, 110, 0.7), 2px -2px rgba(124, 124, 124, 0.8), 3px -3px rgba(139, 139, 139, 0.9), 4px -4px rgb(110, 110, 110);
+    }
+
+}
+
+/*Edición del texto debajo del título*/
+
+.texto{
+    font-size: 1.5vw;
+    padding-top: 0.5vw;
+}
+
+form{
+    margin-left: 5%;
+}
+
+input[type=text], input[type=number]{
+    outline: none;
+    transition: 0.5s;
+}
+
+input[type=submit]{
+    font-family: "Copperplate", "Papyrus", "fantasy";
+    color: white;
+    background-color: black;
+    outline: none;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 5%;
+}
+
+input[type=number]:focus{
+    border: 0.25vw groove #636363;
+    border-radius: 8px 8px 8px 8px;
+}
+
+input[type=text]:focus{
+    border: 0.25vw groove #636363;
+    border-radius: 8px 8px 8px 8px;
+}
+
+input[type=submit]:hover{
+    border: 0.25vw groove #636363;
+    border-radius: 8px 8px 8px 8px;
+}
+
+footer{
+    background: black;
+    height: 25%;
+    margin-bottom: 0%;
+    font-size: 0.75vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer p{
+    padding: 1vw
+}
+
+@media screen and (max-width: 850px) {
+
+    .titulo{
+        font-size: 7vw;
+    }
+
+    label{
+        font-size: 3vw;
+    }
+
+    footer{
+        font-size: 2.5vw;
+        background-repeat: no-repeat;
+        background-size: inherit;
+    }
+
+    body{
+        background-repeat: no-repeat;
+        background-size: inherit;
+    }
+
+
+    
+}
+
+@media  screen and (max-width: 515px) {
+    input[type=submit]{
+        margin-bottom: 15%;
+    }
+}
+
