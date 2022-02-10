@@ -1,3 +1,7 @@
+/**
+ * Validación del formulario de registro
+ */
+
 function validarFormulario() {
 
     var x = document.forms["signUp"]["usuario"].value;
@@ -14,7 +18,9 @@ function validarFormulario() {
 
 }
 
-
+/**
+ * Visualizador de contraseña con el ojo
+ */
 const togglePassword = document.querySelector('#verPass');
 const password = document.querySelector('#pass');
 
@@ -26,5 +32,17 @@ togglePassword.addEventListener('click', function (e) {
     this.classList.toggle('bi-eye');
 });
 
+/**
+ * Menú hamburguesa
+ */
 
+const toggleButton = document.getElementById('button-menu')
+const navWrapper = document.getElementById('nav')
+
+toggleButton.addEventListener('click', hamburguesa)
+
+function hamburguesa() {
+    toggleButton.classList.toggle('close')
+    navWrapper.classList.toggle('show')
+};
 
