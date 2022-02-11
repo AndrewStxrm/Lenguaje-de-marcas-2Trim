@@ -1,11 +1,20 @@
+*{
+    box-sizing: border-box;
+}
 
+/*Height 100% para el html para evitar problemas*/
+
+html{
+    height: 100%;
+}
+   
 /*Propiedades del body donde se introduce el fondo de la página así como la fuente del texto*/
 
 body{
+    height: 100%;
     margin: 0;
     padding: 0;
     background-size: unset;
-    background-image: url("imagenes/fondo.jpg");
     background-repeat: no-repeat;
     font-family: "Copperplate", "Papyrus", "fantasy"
 }
@@ -234,28 +243,199 @@ footer p{
     display: none;
 }
 
-#myBar {
-    width: 10%;
-    height: 30px;
-    background: linear-gradient(90deg, rgba(0,0,0) 0%, rgba(99,112,115) 37%, rgba(194,152,89) 61%, rgba(185,72,34) 75%, rgba(185,34,34) 90%);
-    text-align: center;
-    line-height: 30px; 
-    color: rgb(0, 0, 0);
-    transition: ease-in-out;
-}
-
-
-
-#myProgress {
-    margin: 0 auto;
-    margin-top: 30%;
-    width: 100%;
-    background: rgb(0, 0, 0);
-  }
-
 .navbar.show {
     margin-left: 0;
 }
+
+/*Efecto parallax para la página*/
+
+.parallax1 {
+    background-image: url("imagenes/fondo.jpg");
+    min-height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("imagenes/fondo2.jpg");
+    min-height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Clase sticky que utilizaré con el JS para que el header sea sticky*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+#main {
+    padding: 16px;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sticky + #main {
+    padding-top: 102px;
+}
+
+.divDivisor{
+    height:100px;
+    background-color:rgb(0, 0, 0);
+    font-size:36px;
+    text-align: center;
+}
+
+
+.fila,
+.fila > .columna {
+    padding: 8px;
+}
+  
+
+.columna {
+    float: left;
+    width: 33.33%;
+    display: none; 
+    height: 600px;
+}
+  
+
+.fila:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.content {
+    background-color: black;
+    padding: 8px;
+}
+  
+.showFilter {
+    display: block;
+}
+  
+
+.btn {
+    font-family: "Copperplate", "Papyrus", "fantasy";
+    color: white;
+    background-color: black;
+    outline: none;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover {
+    border: 0.2vw groove #b9630c;
+    border-radius: 8px 8px 8px 8px;
+}
+  
+.btn.active {
+    font-family: "Copperplate", "Papyrus", "fantasy";
+    color: white;
+    background-color: rgb(51, 51, 51);
+    outline: none;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 /*Responsive con el menú hamburguesa*/
 
 @media screen and (max-width: 850px) {
